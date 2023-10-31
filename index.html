@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.4/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
     <script src="app.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="tensorflow_logo_icon_168671.ico" type="image/x-icon">
+    <title>Modelo de regresión </title>
 </head>
+
 <body>
-    
+
+
+    <div class="container">
+        
+       <div class="container-file">
+        <h1>Modelo de regresión Precios inmobiliarios </h1>
+        <label for="upload-json" class="btn-file"> JSON File
+            <input type="file" id="upload-json" class="btn">
+        </label>
+
+       
+
+        <label for="upload-weights" class="btn-file">Binary File
+            <input type="file" id="upload-weights" class="btn-file"><br>
+        </label>
+
+       </div>
+
+        <div class="container-btn">
+            <input type="button" value="Cargar modelo" class="btn" onclick="cargarModelo()">
+            <input type="button" value="Guardar modelo" class="btn" onclick="guardarModelo()">
+            <input type="button" value="Curva de inferencia" class="btn" onclick="verCurvaInferencia()">
+            <input type="button" value="Iniciar entrenamiento" class="btn" onclick="run()">
+        </div>
+    </div>
+
 </body>
+
 </html>
